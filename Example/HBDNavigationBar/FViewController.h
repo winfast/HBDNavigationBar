@@ -1,8 +1,8 @@
 //
-//  HBDPopAnimation.h
+//  FViewController.h
 //  HBDNavigationBar_Example
 //
-//  Created by 李生 on 2019/9/28.
+//  Created by 李生 on 2019/11/27.
 //  Copyright © 2019 listenzz@163.com. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HBDPopAnimation : NSObject <UIViewControllerAnimatedTransitioning>
+@interface FViewController : UIViewController
 
 @end
 

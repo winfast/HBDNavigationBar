@@ -19,6 +19,9 @@ DerivedData
 *.hmap
 *.ipa
 
+# AppCode
+.idea
+
 # Bundler
 .bundle
 
@@ -35,3 +38,5 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 # Pods/
+IDEWorkspaceChecks.plist
+contents.xcworkspacedata

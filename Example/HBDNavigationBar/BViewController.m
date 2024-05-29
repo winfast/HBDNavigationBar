@@ -24,11 +24,18 @@
     self.hbd_barTintColor = UIColor.redColor;
     self.hbd_barStyle = UIBarStyleBlack;
     self.hbd_tintColor = UIColor.whiteColor;
-    
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(toRoot) name:@"pop-to-root" object:nil];
-    
-    self.view.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+
+    self.view.backgroundColor = [UIColor colorWithRed:((float) arc4random_uniform(256) / 255.0) green:((float) arc4random_uniform(256) / 255.0) blue:((float) arc4random_uniform(256) / 255.0) alpha:1.0];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)dealloc {
@@ -36,7 +43,7 @@
 }
 
 - (void)toRoot {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 - (IBAction)present:(UIButton *)sender {
@@ -45,9 +52,9 @@
     nav.modalPresentationStyle = UIModalPresentationCurrentContext;
     self.navigationController.definesPresentationContext = NO;
     [self presentViewController:nav animated:YES completion:^{
-        
+
     }];
-    
+
 }
 
 @end
