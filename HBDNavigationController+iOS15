@@ -1,0 +1,10 @@
+- (void)updateNavigationBarTintColorForViewController:(UIViewController *)vc {
+    if (@available(iOS 13.0, *)) {
+        self.navigationBar.scrollEdgeAppearance.titleTextAttributes = vc.hbd_titleTextAttributes;
+        self.navigationBar.standardAppearance.titleTextAttributes = vc.hbd_titleTextAttributes;
+    } else {
+        self.navigationBar.tintColor = vc.hbd_tintColor;
+        self.navigationBar.titleTextAttributes = vc
+            .hbd_titleTextAttributes;
+    }
+}
